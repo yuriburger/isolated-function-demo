@@ -27,5 +27,5 @@ steps:
     azureSubscription: 'Azure YB (vx company.com)'
     appType: 'functionAppLinux'
     appName: 'fa-isolated-function-demo'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     runtimeStack: 'DOTNET|3.1'
