@@ -29,3 +29,4 @@ steps:
     appName: 'fa-isolated-function-demo'
     package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     runtimeStack: 'DOTNET|3.1'
+    appSettings: '-FUNCTIONS_WORKER_RUNTIME "dotnet-isolated"'
