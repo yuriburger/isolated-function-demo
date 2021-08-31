@@ -18,10 +18,9 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
 - task: DotNetCoreCLI@2
   inputs:
-    command: publish
-    publishWebProjects: True
+    command: 'publish'
+    publishWebProjects: false
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: True
 - task: AzureFunctionApp@1
   inputs:
     azureSubscription: 'Azure YB (vx company.com)'
