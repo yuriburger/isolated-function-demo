@@ -10,4 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
+- task: AzureFunctionApp@1
+  inputs:
+    azureSubscription: 'Azure YB (vx company.com)'
+    appType: 'functionAppLinux'
+    appName: 'fa-isolated-function-demo'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'DOTNET|3.1'
